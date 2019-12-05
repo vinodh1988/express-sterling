@@ -3,6 +3,7 @@ var path=require("path");
 var bodyParser= require("body-parser");
 var app= express();
 var form=require("./server/routes/form");
+var student=require("./server/routes/student");
 
 app.use(bodyParser.urlencoded());
 
@@ -14,6 +15,7 @@ app.set('view engine','pug')
 app.set('views',path.join(__dirname,'public/templates'));
 
 app.use("/form",form);
+app.use("/student",student);
 
 app.get("/",function(request,response){
     response.send("First NODE JS APP");
