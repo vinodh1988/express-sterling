@@ -10,6 +10,9 @@ app.use(express.static(path.join(__dirname,"public/styles/")));
 app.use(express.static(path.join(__dirname,"public/scripts/")));
 app.use(express.static(path.join(__dirname,"node_modules/bootstrap/dist/")));
 
+app.set('view engine','pug')
+app.set('views',path.join(__dirname,'public/templates'));
+
 app.use("/form",form);
 
 app.get("/",function(request,response){

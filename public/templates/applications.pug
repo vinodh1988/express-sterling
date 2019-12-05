@@ -1,0 +1,19 @@
+  
+html
+    link(rel="stylesheet",href="../css/bootstrap.min.css")
+    script(src="../js/bootstrap.min.js")
+    head
+        title  People
+    body(style="background-color: rgb(235, 233, 233);")
+        h1 Applications List
+    table.table.table-striped.table-hover 
+        thead
+            th Name
+            th Skill
+            th Experience
+        tbody
+            each x in applications
+                tr
+                    td= x.name
+                    td= x.skill
+                    td= x.exp

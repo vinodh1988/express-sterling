@@ -3,3 +3,20 @@ h1{
     color: darkblue;
     font-family: arial;
 }
+
+#applications{
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(235, 233, 233);
+    color: rgb(63, 63, 65);
+    min-height: 400px;
+    width: 90%;
+    
+}
+
+iframe{
+   height: 100%;
+   width: 100%;
+   background-color: rgb(235, 233, 233);
+   border: none;
+}

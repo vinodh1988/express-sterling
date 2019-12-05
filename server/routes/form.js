@@ -2,6 +2,7 @@ var express=require("express");
 var fs=require("fs");
 var path=require("path");
 var route=express.Router();
+var config=require('../../config');
 
 route.post("/apply", function(request,response){
     fs.readFile("server/data/data.json","utf8",function(err,data){
@@ -20,10 +21,26 @@ route.post("/apply", function(request,response){
                  if(err)
                     response.sendStatus(500);
                  else
-                    response.send("Your application is added...!!!");
+                    response.redirect("/home");
               })
           }
     });
 })
+
+
+route.get("/applications",function(request,response){
+   fs.readFile("server/data/data.json","utf8",function(err,data){
+        if(err)
+          response.sendStatus(500);
+         else{
+      let arraydata=  JSON.parse(data);
+           response.render("applications",{applications:arraydata});
+         }
+
+
+
+   });
+
+});
 
 module.exports=route;
