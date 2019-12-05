@@ -1,0 +1,17 @@
+{
+  "name": "firstpack",
+  "version": "1.0.0",
+  "description": "First node package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vinodh",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  }
+}

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Home page</title>
+        <link href="style.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <form action="form/apply" method="post">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <th>Skill</th>
+                        <td><select name="skill">
+                             <option>Java</option>
+                             <option>Node JS</option>
+                             <option>Dot Net</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <th>Experience</th>
+                        <td><input type="text" name="exp"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" >
+
+                            <button type="submit" class="btn btn-success" style="margin: 5px;">
+                                Apply Job
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
