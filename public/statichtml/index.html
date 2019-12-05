@@ -6,7 +6,13 @@
         <script src="js/bootstrap.min.js"></script>
     </head>
     <body>
+       
         <div class="jumbotron">
+        
+                <a href="/students" target="myframe" class="btn btn-success" style="margin:20px">
+                    Search Students
+                   </a>
+
             <form action="form/apply" method="post">
                 <table>
                     <tr>
@@ -35,9 +41,11 @@
                     </tr>
                 </table>
             </form>
+            </div>
+           
         </div>
         <div id="applications">
-            <iframe src="/form/applications"></iframe>
+            <iframe src="/form/applications" name="myframe"></iframe>
         </div>
     </body>
 </html>

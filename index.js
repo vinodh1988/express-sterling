@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded());
 app.use(express.static(path.join(__dirname,"public/styles/")));
 app.use(express.static(path.join(__dirname,"public/scripts/")));
 app.use(express.static(path.join(__dirname,"node_modules/bootstrap/dist/")));
-
+app.use(express.static(path.join(__dirname,"node_modules/jquery/dist/")));
 app.set('view engine','pug')
 app.set('views',path.join(__dirname,'public/templates'));
 
@@ -23,6 +23,11 @@ app.get("/",function(request,response){
 
 app.get("/home",function(request,response){
     response.sendFile(path.join(__dirname,"public/statichtml/index.html"));
+})
+
+
+app.get("/students",function(request,response){
+    response.sendFile(path.join(__dirname,"public/statichtml/studentsearch.html"));
 })
 
 app.listen("4040",function(){
